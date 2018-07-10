@@ -1,0 +1,304 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:device.farm
+LIBS:ZVC9A-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 11
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 2250 1600 1150 800 
+U 5777AEFB
+F0 "ESP" 60
+F1 "esp-mains.sch" 60
+F2 "MAINS-1" I L 2250 1750 60 
+F3 "MAINS-2" I L 2250 1950 60 
+F4 "ADC" I L 2250 2250 60 
+F5 "GPIO16" B R 3400 2250 60 
+F6 "GPIO14" B R 3400 2150 60 
+F7 "GPIO12" B R 3400 1950 60 
+F8 "GPIO13" B R 3400 2050 60 
+F9 "GPIO5" B R 3400 1850 60 
+F10 "GPIO4" B R 3400 1750 60 
+$EndSheet
+NoConn ~ 3400 2050
+NoConn ~ 3400 1850
+NoConn ~ 3400 2250
+Text Label 2150 1950 2    60   ~ 0
+MAINS-N
+Text Label 2150 1750 2    60   ~ 0
+MAINS-L
+NoConn ~ 2250 2250
+$Comp
+L R R1
+U 1 1 59C48B42
+P 4300 1950
+F 0 "R1" V 4200 1850 50  0000 C CNN
+F 1 "4k7" V 4200 2050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 4230 1950 50  0001 C CNN
+F 3 "" H 4300 1950 50  0000 C CNN
+	1    4300 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 59EF5E75
+P 4300 2150
+F 0 "R2" V 4200 2250 50  0000 C CNN
+F 1 "4k7" V 4200 2050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 4230 2150 50  0001 C CNN
+F 3 "" H 4300 2150 50  0000 C CNN
+	1    4300 2150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2250 1750 2150 1750
+Wire Wire Line
+	2250 1950 2150 1950
+$Comp
+L Conn_01x02 IN1
+U 1 1 59F33377
+P 1850 2750
+F 0 "IN1" H 1850 2850 50  0000 C CNN
+F 1 "Conn_01x02" H 1850 2550 50  0000 C CNN
+F 2 "device.farm:DG301-5.0-02" H 1850 2750 50  0001 C CNN
+F 3 "" H 1850 2750 50  0001 C CNN
+	1    1850 2750
+	-1   0    0    -1  
+$EndComp
+Text Label 2050 2750 0    60   ~ 0
+MAINS-L
+Text Label 2050 2850 0    60   ~ 0
+MAINS-N
+Wire Wire Line
+	4150 2150 3400 2150
+Wire Wire Line
+	3400 1950 4150 1950
+Wire Wire Line
+	4450 1950 4500 1950
+Wire Wire Line
+	4500 2150 4450 2150
+$Comp
+L R R24
+U 1 1 5B3B007E
+P 3850 1400
+F 0 "R24" V 3700 1400 50  0000 C CNN
+F 1 "270R" V 4000 1400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 3780 1400 50  0001 C CNN
+F 3 "" H 3850 1400 50  0000 C CNN
+	1    3850 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D2
+U 1 1 5B3B031F
+P 4200 1400
+F 0 "D2" H 4200 1250 50  0000 C CNN
+F 1 "LED" H 4200 1550 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 4200 1400 50  0001 C CNN
+F 3 "" H 4200 1400 50  0001 C CNN
+	1    4200 1400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3400 1750 3700 1750
+Text GLabel 4000 1950 1    60   BiDi ~ 0
+SDA
+Text GLabel 4000 2150 3    60   Output ~ 0
+SCL
+Wire Wire Line
+	4050 1400 4000 1400
+$Sheet
+S 6550 1100 550  300 
+U 5B3AD0AC
+F0 "channel-0" 60
+F1 "channel.sch" 60
+F2 "A0" U L 6550 1200 60 
+F3 "A1" U L 6550 1300 60 
+$EndSheet
+$Sheet
+S 6550 1600 550  300 
+U 5B3AD0AD
+F0 "channel-1" 60
+F1 "channel.sch" 60
+F2 "A0" U L 6550 1700 60 
+F3 "A1" U L 6550 1800 60 
+$EndSheet
+$Sheet
+S 6550 2100 550  300 
+U 5B3AD0AE
+F0 "channel-2" 60
+F1 "channel.sch" 60
+F2 "A0" U L 6550 2200 60 
+F3 "A1" U L 6550 2300 60 
+$EndSheet
+$Sheet
+S 6550 2600 550  300 
+U 5B3AD0AF
+F0 "channel-3" 60
+F1 "channel.sch" 60
+F2 "A0" U L 6550 2700 60 
+F3 "A1" U L 6550 2800 60 
+$EndSheet
+$Sheet
+S 6550 3100 550  300 
+U 5B3AD0B0
+F0 "channel-4" 60
+F1 "channel.sch" 60
+F2 "A0" U L 6550 3200 60 
+F3 "A1" U L 6550 3300 60 
+$EndSheet
+$Sheet
+S 6550 3600 550  300 
+U 5B3AD0AB
+F0 "channel-5" 60
+F1 "channel.sch" 60
+F2 "A0" U L 6550 3700 60 
+F3 "A1" U L 6550 3800 60 
+$EndSheet
+$Sheet
+S 6550 4100 550  300 
+U 5B3AD0B1
+F0 "channel-6" 60
+F1 "channel.sch" 60
+F2 "A0" U L 6550 4200 60 
+F3 "A1" U L 6550 4300 60 
+$EndSheet
+$Sheet
+S 6550 4600 550  300 
+U 5B3AD0B2
+F0 "channel-7" 60
+F1 "channel.sch" 60
+F2 "A0" U L 6550 4700 60 
+F3 "A1" U L 6550 4800 60 
+$EndSheet
+$Sheet
+S 6550 5100 550  300 
+U 5B3A4E99
+F0 "channel-8" 60
+F1 "channel.sch" 60
+F2 "A0" U L 6550 5200 60 
+F3 "A1" U L 6550 5300 60 
+$EndSheet
+$Comp
+L VCC #PWR01
+U 1 1 5B3A67B2
+P 4500 1950
+F 0 "#PWR01" H 4500 1800 50  0001 C CNN
+F 1 "VCC" H 4500 2100 50  0000 C CNN
+F 2 "" H 4500 1950 50  0001 C CNN
+F 3 "" H 4500 1950 50  0001 C CNN
+	1    4500 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L VCC #PWR02
+U 1 1 5B3A6812
+P 4500 2150
+F 0 "#PWR02" H 4500 2000 50  0001 C CNN
+F 1 "VCC" H 4500 2300 50  0000 C CNN
+F 2 "" H 4500 2150 50  0001 C CNN
+F 3 "" H 4500 2150 50  0001 C CNN
+	1    4500 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3700 1750 3700 1400
+$Comp
+L GND #PWR03
+U 1 1 5B3A77E1
+P 4450 1400
+F 0 "#PWR03" H 4450 1150 50  0001 C CNN
+F 1 "GND" H 4450 1250 50  0000 C CNN
+F 2 "" H 4450 1400 50  0001 C CNN
+F 3 "" H 4450 1400 50  0001 C CNN
+	1    4450 1400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4350 1400 4450 1400
+$Comp
+L HLK-PM03 U2
+U 1 1 5B3A8FD4
+P 3850 3600
+F 0 "U2" H 3850 3950 60  0000 C CNN
+F 1 "HLK-PM03" H 3850 3250 60  0000 C CNN
+F 2 "device.farm:HLK-PM01" H 3850 3600 60  0001 C CNN
+F 3 "" H 3850 3600 60  0001 C CNN
+	1    3850 3600
+	1    0    0    -1  
+$EndComp
+Text Label 3350 3450 2    60   ~ 0
+MAINS-L
+Text Label 3350 3750 2    60   ~ 0
+MAINS-N
+$Comp
+L GND #PWR04
+U 1 1 5B3A999D
+P 4350 3750
+F 0 "#PWR04" H 4350 3500 50  0001 C CNN
+F 1 "GND" H 4350 3600 50  0000 C CNN
+F 2 "" H 4350 3750 50  0001 C CNN
+F 3 "" H 4350 3750 50  0001 C CNN
+	1    4350 3750
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4450 3450 2    60   Output ~ 0
+MOTOR_PWR
+$Comp
+L PWR_FLAG #FLG05
+U 1 1 5B3AA229
+P 4350 3350
+F 0 "#FLG05" H 4350 3425 50  0001 C CNN
+F 1 "PWR_FLAG" H 4350 3500 50  0000 C CNN
+F 2 "" H 4350 3350 50  0001 C CNN
+F 3 "" H 4350 3350 50  0001 C CNN
+	1    4350 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 3350 4350 3450
+Wire Wire Line
+	4350 3450 4450 3450
+Connection ~ 4350 3450
+NoConn ~ 6550 1200
+NoConn ~ 6550 1300
+$EndSCHEMATC
